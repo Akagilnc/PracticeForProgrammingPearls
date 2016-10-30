@@ -10,7 +10,7 @@ for i in range(0, 1000000):
 for i in range(0, 10000000):
     indexList.append(0)
 
-
+# use +1 can make sure we won't miss some equals number.
 for num in inputList:
     indexList[num] += 1
 
