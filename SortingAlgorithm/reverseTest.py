@@ -11,3 +11,4 @@ if len(tempString) < i:
 
 
 print((tempString[i - 1::-1] + tempString[len(tempString):i - 1:-1])[::-1])
+
