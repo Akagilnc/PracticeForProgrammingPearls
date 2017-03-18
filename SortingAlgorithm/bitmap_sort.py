@@ -16,7 +16,7 @@ def bitmap_sort():
         # Write result to file
         for index, value in enumerate(index_list):
             if value == 1:
-                f.write((str(index)+'\n') * value)
+                f.write((str(index) + '\n'))
 
 
 def make_input():
