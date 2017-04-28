@@ -89,3 +89,6 @@ ENV/
 .ropeproject
 
 .idea/
+*/.DS_Store
+.DS_Store
+input_file_large.txt
