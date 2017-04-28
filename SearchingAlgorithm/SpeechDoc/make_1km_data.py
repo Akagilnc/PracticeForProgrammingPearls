@@ -3,7 +3,7 @@ import string
 import time
 
 
-def id_generator(size=4, chars=string.ascii_letters):
+def id_generator(size=4, chars=string.ascii_letters + string.digits + string.hexdigits):
    return ''.join(random.choice(chars) for _ in range(size))
 
 start_time = time.time()
