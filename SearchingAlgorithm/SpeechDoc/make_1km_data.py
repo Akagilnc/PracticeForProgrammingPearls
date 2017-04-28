@@ -17,20 +17,18 @@ temp_list = []
 # Open a input file to store these numbers
 
 # Write numbers to input_file
-#for temp_list in input_list.pop(10000):
+# for temp_list in input_list.pop(10000):
 for i in range(1000):
     for line in range(10**6):
         temp_list.append(str(random.getrandbits(32)) + ',' + id_generator() + '\n')
         # temp_word = id_generator()
         # f_input.write(temp_word + '\t' + temp_word * random.randrange(1, 9) + '\n')
-        if line % 999999 == 0 and line != 0:
-            print("--- %f%% end in %s seconds ---" % (p, time.time() - start_time))
-            p += 0.1
-            start_time = time.time()
+    else:
+        print("--- %f%% end in %s seconds ---" % (p, time.time() - start_time))
+        p += 0.1
+        start_time = time.time()
 
     with open('input_file_large.txt', 'a') as f_input:
-        start_time = time.time()
-        print("--- %s begin in %s seconds ---" % ('write file begin', time.time() - start_time))
         f_input.writelines(temp_list)
-        print("--- %s begin in %s seconds ---" % ('write file end', time.time() - start_time))
+    print("--- %s begin in %s seconds ---" % ('write file end', time.time() - start_time))
 
