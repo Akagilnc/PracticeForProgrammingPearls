@@ -26,10 +26,10 @@ for i in range(1000):
     else:
         print("--- %f%% end in %s seconds ---" % (p, time.time() - start_time))
         p += 0.1
-        temp_list.clear()
         start_time = time.time()
 
     with open('input_file_large.txt', 'a') as f_input:
         f_input.writelines(temp_list)
     print("--- %s begin in %s seconds ---" % ('write file end', time.time() - start_time))
+    temp_list.clear()
 
