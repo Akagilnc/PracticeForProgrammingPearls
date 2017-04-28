@@ -91,4 +91,15 @@ ENV/
 .idea/
 */.DS_Store
 .DS_Store
-input_file_large.txt
+
+# big txt files in Searching Algorithm
+SearchingAlgorithm/SpeechDoc/input_file_large.txt
+SearchingAlgorithm/SpeechDoc/sort_file_large.txt
+SearchingAlgorithm/SpeechDoc/temp_file_1
+SearchingAlgorithm/SpeechDoc/temp_file_2
+SearchingAlgorithm/SpeechDoc/temp_file_3
+SearchingAlgorithm/SpeechDoc/temp_file_4
+SearchingAlgorithm/SpeechDoc/temp_file_5
+SearchingAlgorithm/SpeechDoc/temp_file_6
+SearchingAlgorithm/SpeechDoc/temp_file_7
+SearchingAlgorithm/SpeechDoc/temp_file_8
