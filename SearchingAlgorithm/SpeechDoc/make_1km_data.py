@@ -22,7 +22,7 @@ temp_list = []
 
 # Write numbers to input_file
 # for temp_list in input_list.pop(10000):
-for i in range(1000):
+for i in range(1001):
     for line in range(10**6):
         number = get_number()
         temp_list.append(number + ',' + number + 'Description \n')
