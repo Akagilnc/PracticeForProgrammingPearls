@@ -47,10 +47,22 @@ class SortData:
     def write_to_result(self):
         for i in range(1, 9):
             with open('temp_file_'+str(i), 'r') as file, open("sort_file_large.txt", 'a') as result_file:
+                tuple_lines = []
                 lines = file.readlines()
                 self.get_time("read finished " + str(i))
-                lines.sort()
+                for line in lines:
+                    line = line.split(',')
+                    tuple_lines.append((int(line[0]), line[1].lstrip()))
+                self.get_time("translate finished " + str(i))
+
+                tuple_lines = sorted(tuple_lines, key=lambda num: num[0])
                 self.get_time("sort finished " + str(i))
+
+                lines.clear()
+                for line in tuple_lines:
+                    lines.append(str(line[0]) + ',' + line[1])
+                self.get_time("translate back finished " + str(i))
+
                 result_file.writelines(lines)
                 self.get_time('write result finished ' + str(i))
 
@@ -74,4 +86,4 @@ class SortData:
 
 
 sort = SortData()
-sort.main2()
+sort.main()
