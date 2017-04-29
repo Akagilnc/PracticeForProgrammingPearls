@@ -106,7 +106,6 @@ class SortData:
                 self.get_time("write to temp " + str(i))
                 i += 1
 
-
         self.write_to_result()
 
     def main2(self):
