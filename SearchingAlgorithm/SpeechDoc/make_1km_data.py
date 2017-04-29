@@ -24,7 +24,7 @@ class MakeData:
         for i in range(1001):
             for line in range(10**6):
                 number = self.get_number()
-                temp_list.append(str(number) + ',' + str(number) + 'Description')
+                temp_list.append(str(number) + ',' + str(number) + 'Description \n')
             else:
                 self.get_time("--- %f%% end ---" % p)
                 p += 0.1
