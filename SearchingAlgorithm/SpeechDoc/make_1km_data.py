@@ -14,7 +14,7 @@ class MakeData:
         return str(random.getrandbits(32))
 
     def get_time(self, message):
-        print('%s in %f seconds' % (message, time.time() - self.start_time))
+        print('{message} in {time} seconds'.format(message=message, time=(time.time() - self.start_time)))
         self.start_time = time.time()
 
     def make_data(self):
@@ -26,7 +26,7 @@ class MakeData:
                 number = self.get_number()
                 temp_list.append(str(number) + ',' + str(number) + 'Description \n')
             else:
-                self.get_time("--- %f%% end ---" % p)
+                self.get_time("--- {percentage}%% end ---".format(percentage=p))
                 p += 0.1
 
             with open('input_file_large.txt', 'a') as f_input:
