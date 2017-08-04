@@ -48,7 +48,7 @@ class Searching:
 
                 if 1000 > abs(size) > 0:
                     line = self.final_search(file, number)
-                    print("%d times searched, result is :" % i)
+                    print("{search_times} times searched, result is :".format(search_times=i))
                     print(line)
                     break
                 else:
@@ -56,7 +56,7 @@ class Searching:
                     line = self.get_line(file)
                     # print("outside" + str(line) + "size = " + str(size))
                     if int(line[0]) == number:
-                        print("%d times searched, result is :" % i)
+                        print("{search_times} times searched, result is :".format(search_times=i))
                         print(line)
                         break
                     elif int(line[0]) > number:
